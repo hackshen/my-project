@@ -30,15 +30,15 @@ setInterval(function(){
                     subject:'主人女神来消息了', //邮件标题
                     html: `<img src=`+json.cards[0].mblog.user.profile_image_url+`/>`+
                     '<br/>Content:'+`<p>`+ json.cards[0].mblog.text + `</p>`+
-                    '<br/>Time：'+json.cards[0].mblog.created_at+ 
+                    '<br/>Time：'+json.cards[0].mblog.created_at+
                     '<br/>来自：'+json.cards[0].mblog.source//`<p>发信测试</p>` //邮件内容
-                }; 
+                };
                 transporter.sendMail(mailOptions,function(err,info){
                     if(err){
                         console.log(err);
                         return;
                     }
-                    console.log('Successful ！')
+                    console.log('Successful!😀')
                 })
           }
          // console.log(json.cards[0].mblog.text)
